@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>login</title>
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+
+<body>
+    <div class="con">
+        <div class="login">
+            <form method="POST" action="servlet/LoginServlet">
+                <p>用户名</p>
+                <input type="text" name="user" placeholder="帐号">
+                <p>密码</p>
+                <input type="password" name="password" placeholder="密码">
+                <input id="rem" type="checkbox">
+                <label for="rem" class="lable">记住登录状态</label>
+                <input type="submit" name="sb" value="登陆" class="sb">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
