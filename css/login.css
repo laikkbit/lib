@@ -3,7 +3,7 @@
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-    font-family: Arial,Helvetica,sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .con {
@@ -23,11 +23,13 @@
     height: 222px;
     border: 1px solid #ccc;
 }
+
 .login-form {
     margin: 0 auto;
     width: 230px;
     height: 222px;
 }
+
 input {
     display: block;
     padding-left: 27px;
@@ -78,5 +80,3 @@ input:focus {
     font-size: 12px;
     padding-top: 15px;
 }
-
-

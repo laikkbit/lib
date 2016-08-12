@@ -5,3 +5,7 @@
 /.mymetadata
 /.project
 /mysql-connector-java-5.0.8.jar
+/node_modules
+**/*.log
+/less
+/gulpfile.js
