@@ -9,7 +9,7 @@
 <body>
 
 	<div class="background">
-		<!-- <canvas height="100%" width="100%" id="canvas" style="position: absolute; height: 100%; width:100% "></canvas> -->
+		<canvas height="100%" width="100%" id="canvas" style="position: absolute; height: 100%; width:100% "></canvas>
 		<header>
 			 <div class="logo">IDSBLLP</div>
 			 <div class="pull-right"></div>
@@ -93,20 +93,29 @@
 						<h1 class="up-file">文件选择 :</h1>
 						<div class="file-selected">
 							<span class="file-name">文件名 :</span>
-							<input type="text" name="file_name" id="fileName">
-							
+							<input type="text" name="file_name" id="fileName">		
 						</div>
 						<div class="file-selected">
 							<span class="file-intro">描 述:</span>
 							<input type="text" name="intro" id="fileIntro">
 						</div>
+						<div id="closeBtn">X</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<!-- <script src="../js/canvas.js"></script> -->
+	<script src="../js/canvas.js"></script>
+	<script>
+	
+	document.querySelector('.up-files').addEventListener('click', function () {
+			document.querySelector('.up-files-back').style.display = 'block';
+		})
+		document.querySelector('#closeBtn').addEventListener('click', function () {
+			document.querySelector('.up-files-back').style.display = 'none';
+		})
+	</script>
 
 </body>
 </html>
