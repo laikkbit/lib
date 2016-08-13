@@ -95,7 +95,6 @@ header {
 }
 .user-lists li {
   display: block;
-  padding-left: 50px;
   width: 100%;
   height: 35px;
   line-height: 35px;
@@ -115,10 +114,13 @@ header {
 .user-lists li:hover {
   height: 40px;
   line-height: 40px;
-  padding-left: 45px;
   font-size: 22px;
 }
 .user-lists li .text {
+  display: inline-block;
+  position: absolute;
+  padding-left: 50px;
+  width: 200px;
   float: left;
 }
 .user-lists li .icon {
@@ -146,30 +148,9 @@ header {
   height: 100%;
   background-color: rgba(194, 194, 194, 0.5);
 }
-.my-infor,
-.all-users-infor {
+.all-users-infor,
+.all-files-infor {
   display: none;
-}
-.all-users-title,
-.all-files-title {
-  width: 100%;
-  height: 50px;
-  background-color: rgba(239, 239, 239, 0.6);
-  border-radius: 2px;
-  border: 2px double #e3e3e3;
-  box-shadow: 0 2px 1px #e0e0e0;
-}
-.all-users-title .name,
-.all-files-title .name,
-.all-users-title .number,
-.all-files-title .number,
-.all-users-title .position,
-.all-files-title .position,
-.all-users-title .email,
-.all-files-title .email {
-  float: left;
-  font-size: 22px;
-  line-height: 50px;
 }
 .all-users-list,
 .all-files-list {
@@ -192,6 +173,27 @@ header {
   float: left;
   font-size: 20px;
   line-height: 40px;
+}
+.all-users-title,
+.all-files-title {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(239, 239, 239, 0.6);
+  border-radius: 2px;
+  border: 2px double #e3e3e3;
+  box-shadow: 0 2px 1px #e0e0e0;
+}
+.all-users-title .name,
+.all-files-title .name,
+.all-users-title .number,
+.all-files-title .number,
+.all-users-title .position,
+.all-files-title .position,
+.all-users-title .email,
+.all-files-title .email {
+  float: left;
+  font-size: 22px;
+  line-height: 50px;
 }
 .name {
   padding-left: 50px;
@@ -230,6 +232,7 @@ header {
   height: 500px;
   box-shadow: 0 0 10px black;
   background-color: #b7b7b7;
+  animation: fidein .6s;
 }
 .up-files-con .up-file {
   padding: 30px 0 0 50px;
@@ -261,6 +264,29 @@ header {
 .up-files-con .file-selected input:focus {
   outline: 3px solid #a3a2a2;
 }
+@keyframes fidein {
+  from {
+    top: -700px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+.closed {
+  animation: fideout 1s;
+}
+@keyframes fideout {
+  from {
+    top: 0;
+    opacity: 1;
+  }
+  to {
+    top: -700px;
+    opacity: 0;
+  }
+}
 #closeBtn {
   position: absolute;
   right: -15px;
@@ -282,4 +308,36 @@ header {
   width: 50px;
   height: 50px;
   line-height: 50px;
+}
+@keyframes change {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
 }

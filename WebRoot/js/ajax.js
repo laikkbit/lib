@@ -1,7 +1,7 @@
 
 function MyAjax (ajaxData) {
 	//设置默认参数
-	var  obj = ajaxData;
+	// var  obj = ajaxData;
 	var obj = {
 		url: '',
 		methed: 'get',
@@ -10,7 +10,7 @@ function MyAjax (ajaxData) {
 		success: function () {},
 		fail: function () {},
 	}
-	for (let item in ajaxData) {
+	for (var item in ajaxData) {
 		obj[item] = ajaxData[item] || obj[item];
 	}
 
@@ -25,26 +25,15 @@ function MyAjax (ajaxData) {
 	}
 	var xhr = new createXhr ();
 
-	function createSearch () {
-		var search = '';
-		if (obj.data) {
-			for (let item in obj.data) {
-				search += item + '=' + obj.data[item] +'&';
-			}
-			search = search.slice(0, search.length-1);
-		}
-		return search;
-	}
-
 	switch (obj.methed.toLowerCase()) {
 		case 'get':
-			xhr.open('get', obj.url + '?' + createSearch (), obj.async);
+			xhr.open('get', obj.url + '?' + obj.data, obj.async);
 			xhr.send();
 		break;
 		case 'post':
 			xhr.open('post', obj.url, obj.async);
 			xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-			xhr.send(createSearch ());
+			xhr.send(obj.data);
 		break;
 	}
 	xhr.onload = function () {

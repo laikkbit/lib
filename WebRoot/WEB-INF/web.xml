@@ -28,7 +28,7 @@
     <url-pattern>/servlet/RegisterServlet</url-pattern>
   </servlet-mapping>	
   <welcome-file-list>
-    <welcome-file>/html/welcome.html</welcome-file>
+    <welcome-file>/home/welcome.html</welcome-file>
   </welcome-file-list>
     <filter>
         <filter-name>LoginFilter</filter-name>
